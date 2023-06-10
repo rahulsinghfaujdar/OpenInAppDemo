@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardGraph"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/today_clicks"
+            />
+
+        <TextView
+            android:id="@+id/tvCardValue"
+            style="@style/topCardValue"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:text="123"
+            android:gravity="bottom"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/tvCardTitle"
+            style="@style/topCardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today's Clicks"
+            android:layout_marginTop="5dp"
+            android:gravity="bottom"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

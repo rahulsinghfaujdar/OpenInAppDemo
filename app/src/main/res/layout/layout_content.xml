@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/container_rounded_cornor"
+    android:scrollbars="none"
+    app:behavior_overlapTop="100dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="15dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="15dp" />
+
+        <TextView
+            android:id="@+id/tvWishTitle"
+            style="@style/wishTextHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Good morning"
+            android:drawableEnd="@drawable/hi"
+            android:drawablePadding="10dp"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:text="Rahul Singh faujdar"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/tvWishTitle" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardGraph"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+            <com.highsoft.highcharts.core.HIChartView
+                android:id="@+id/hc"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                tools:context="com.openinapp.ui.links.LinksFragment"/>
+
+            <TextView
+                android:id="@+id/tvGraphDate"
+                style="@style/chartDurationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="22 Aug - 23 Sept"
+                app:drawableEndCompat="@drawable/graph_time" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTopCards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/cardGraph"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_layout_topcard" />
+
+        <View
+            android:id="@+id/viewViewAnalytics"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/rvTopCards" />
+
+        <TextView
+            android:id="@+id/tvViewAnalytics"
+            style="@style/viewButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:text="View Analytics"
+            app:drawableStartCompat="@drawable/analytics"
+            app:layout_constraintBottom_toBottomOf="@+id/viewViewAnalytics"
+            app:layout_constraintEnd_toEndOf="@id/viewViewAnalytics"
+            app:layout_constraintStart_toStartOf="@id/viewViewAnalytics"
+            app:layout_constraintTop_toTopOf="@+id/viewViewAnalytics" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="220dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/viewViewAnalytics"
+            app:tabBackground="@drawable/tabview_bg"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabRippleColor="@null"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/Tab"
+            app:tabTextColor="@color/wishTextColor">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Links" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Links" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="@null"
+            android:src="@drawable/search"
+            app:layout_constraintBottom_toBottomOf="@+id/tab"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintTop_toTopOf="@+id/tab" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_bg"
+            android:textCursorDrawable="@null"
+            android:visibility="gone"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/tab"
+            app:queryBackground="@null" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTabContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/searchView"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_layout_tab" />
+
+        <View
+            android:id="@+id/viewViewAllLinks"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/rvTabContainer" />
+
+        <TextView
+            android:id="@+id/tvViewAllLinks"
+            style="@style/viewButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:text="View all Links"
+            app:drawableStartCompat="@drawable/link"
+            app:layout_constraintBottom_toBottomOf="@+id/viewViewAllLinks"
+            app:layout_constraintEnd_toEndOf="@id/viewViewAllLinks"
+            app:layout_constraintStart_toStartOf="@id/viewViewAllLinks"
+            app:layout_constraintTop_toTopOf="@+id/viewViewAllLinks" />
+
+        <TextView
+            android:id="@+id/tvTalkWithUs"
+            style="@style/viewButtonText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:text="Talk with us"
+            app:drawableStartCompat="@drawable/whtasapp"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/viewViewAllLinks" />
+
+        <TextView
+            android:id="@+id/tvFrequentlyAskedQuestions"
+            style="@style/viewButtonText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:text="Frequently Asked Questions"
+            app:drawableStartCompat="@drawable/questions"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+            app:layout_constraintTop_toBottomOf="@+id/tvTalkWithUs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
