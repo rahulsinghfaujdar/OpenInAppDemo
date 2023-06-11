@@ -26,6 +26,5 @@
 * Custom magnificaent UI
 
 ### Screenshots
- UI | HighChart | Navigation | Search
---- | --- | --- |
-<img src="https://github.com/rahulsinghfaujdar/NewsDetail/blob/main/screenshots/Screenshot_20221006_130541.png" width="100%"></img> | <img src="https://github.com/rahulsinghfaujdar/NewsDetail/blob/main/screenshots/Screenshot_20221006_130620.png" width="100%"></img> | <img src="https://github.com/rahulsinghfaujdar/NewsDetail/blob/main/screenshots/Screenshot_20221006_130653.png" width="100%"></img>
+ UI | HighChart | Navigation | Search |
+<img src="https://github.com/rahulsinghfaujdar/OpenInAppDemo/blob/master/gradle/Screenshot_20230610_112009.png" width="100%"></img> | <img src="https://github.com/rahulsinghfaujdar/OpenInAppDemo/blob/master/gradle/Screenshot_20230610_112009.png" width="100%"></img> | <img src="https://github.com/rahulsinghfaujdar/OpenInAppDemo/blob/master/gradle/Screenshot_20230610_123625.png" width="100%"></img> | <img src="https://github.com/rahulsinghfaujdar/OpenInAppDemo/blob/master/gradle/Screenshot_20230610_112046.png" width="100%"></img>
