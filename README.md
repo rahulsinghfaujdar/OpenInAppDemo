@@ -16,7 +16,7 @@
 * TOML + Gradle version catalogs [TOML](https://funkymuse.dev/posts/toml-gradle)
 * Dagger [Hilt](https://dagger.dev/hilt)
 * Retrofit [square](https://square.github.io/retrofit)
-* HighChart [Lne Time Series](https://www.highcharts.com/demo/android/line-time-series)
+* HighChart [Line Time Series](https://www.highcharts.com/demo/android/line-time-series)
 * Uses Recycler View & Card View
 * Uses Constraint Layout
 
