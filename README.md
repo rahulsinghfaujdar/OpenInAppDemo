@@ -8,9 +8,9 @@
 * Minimum SDK version - 24
 * AGP Version - 8.2.0-alpha06
 * Kotlin Version - 1.8.10
-* Gradle Distributions - gradle-8.1-bin
+* Gradle Distributions - [gradle-8.1-bin](https://docs.gradle.org/current/userguide/gradle_wrapper.html)
 * Gradle JDK Runtime Version - 17
-* Android Studio Version - Android Studio Hedgehog | 2023.1.1 Canary 6
+* Android Studio Version - [Android Studio Hedgehog | 2023.1.1 Canary 6](https://androidstudio.googleblog.com/2023/05/android-studio-hedgehog-canary-6-now.html)
 * Built on MVVM architecture pattern
 * KTS [DSL](https://developer.android.com/build/migrate-to-kotlin-dsl)
 * TOML + Gradle version catalogs [TOML](https://funkymuse.dev/posts/toml-gradle)
