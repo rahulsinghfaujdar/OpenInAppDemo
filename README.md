@@ -23,7 +23,7 @@
 ### Features
 * Searching on links.
 * Analytics representation using HighCharts
-* Custom magnificaent UI
+* Custom UI
 
 ### Screenshots
  UI | HighChart | Navigation | Search
